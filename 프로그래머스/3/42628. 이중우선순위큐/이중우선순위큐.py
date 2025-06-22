@@ -20,4 +20,4 @@ def solution(operations):
             elif cm_num == "-1" and len(h) > 0:
                 heapq.heappop(h)
 
-    return list(map(int, [heapq.nlargest(len(h), h)[0], h[0]])) if h else [0,0]
+    return [max(h), h[0]] if h else [0,0]
